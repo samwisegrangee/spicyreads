@@ -12,14 +12,54 @@ footer
   height: 100px
   width: 100%
 
+.dark-box
+  background-color: $ed-green-dark
+  color: $ed-cream-light
+
+section
+  overflow: auto
+
+.nav-space
+  height: 40px
+
+.pic
+  box-shadow: 1px 1px 5px #888888
+
+//Single Column
 .center
   max-width: 400px
   margin: 0 auto
   padding: 10px
 
-.dark-box
-  background-color: $ed-green-dark
-  color: $ed-cream-light
-  
-.nav-space
-  height: 40px
+//Double Column
+.half-holder
+  width: 100%
+
+.left-half, .right-half
+  display: inline-block
+  width: 50%
+
+.left-half
+  float:left
+
+.right-half
+  float: right
+
+.twin
+  width: 300px
+  padding: 10px
+
+.l-twin
+  float: right
+
+.r-twin
+  float: left
+
+@media (max-width: 560px)
+  .left-half, .right-half
+    display: block
+    width: 100%
+
+  .left-half, .right-half,
+  .l-twin, .r-twin
+    float: none

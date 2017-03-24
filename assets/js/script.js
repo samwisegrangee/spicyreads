@@ -1,5 +1,19 @@
 $(document).ready(function() {
 
+  //Smooth scrolling between ""#anchor" links.
+  $('a[href^="#"]').on('click',function (e) {
+      e.preventDefault();
+
+      var target = this.hash;
+      var $target = $(target);
+
+      $('html, body').stop().animate({
+          'scrollTop': $target.offset().top
+      }, 900, 'swing', function () {
+          window.location.hash = target;
+      });
+  });
+
   //Toggles the size of the Bio boxes
   $(".read-more").click(function(){
     $(".q-box").addClass("big", 1000);
@@ -15,6 +29,7 @@ $(document).ready(function() {
   var sm = 100 - bg; //Sets the amount remaining
   var bp = bg + "%"; //Adds percentage to big one
   var sp = sm + "%"; //Adds percentage to small one
+
   //Top Left
   $(".top-left").mouseover(function(){
     $(this).css({"height": bp, "width": bp});
@@ -47,18 +62,16 @@ $(document).ready(function() {
     $(".box").css({"height": "50%", "width": "50%"})
   });
 
-  //Smooth scrolling between ""#anchor" links.
-  $('a[href^="#"]').on('click',function (e) {
-      e.preventDefault();
-
-      var target = this.hash;
-      var $target = $(target);
-
-      $('html, body').stop().animate({
-          'scrollTop': $target.offset().top
-      }, 900, 'swing', function () {
-          window.location.hash = target;
-      });
+  //Vidroll
+  $(window).scroll(function() {
+    youtubeVidScroll();
   });
+
+  function youtubeVidScroll() {
+
+    var wScroll = $(window).scrollTop();
+
+    $('.vidroll').css('background-position-y','-'+ wScroll +'px');
+  }
 
 });

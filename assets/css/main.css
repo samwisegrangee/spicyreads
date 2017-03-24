@@ -235,19 +235,64 @@ footer {
   width: 100%;
 }
 
+.dark-box {
+  background-color: #358067;
+  color: #fcfaf1;
+}
+
+section {
+  overflow: auto;
+}
+
+.nav-space {
+  height: 40px;
+}
+
+.pic {
+  box-shadow: 1px 1px 5px #888888;
+}
+
 .center {
   max-width: 400px;
   margin: 0 auto;
   padding: 10px;
 }
 
-.dark-box {
-  background-color: #358067;
-  color: #fcfaf1;
+.half-holder {
+  width: 100%;
 }
 
-.nav-space {
-  height: 40px;
+.left-half, .right-half {
+  display: inline-block;
+  width: 50%;
+}
+
+.right-half {
+  float: right;
+}
+
+.twin {
+  width: 300px;
+  padding: 10px;
+}
+
+.l-twin {
+  float: right;
+}
+
+.r-twin {
+  float: left;
+}
+
+@media (max-width: 560px) {
+  .left-half, .right-half {
+    display: block;
+    width: 100%;
+  }
+  .left-half, .right-half,
+  .l-twin, .r-twin {
+    float: none;
+  }
 }
 
 a {
@@ -308,6 +353,10 @@ nav ul li {
   height: 100%;
 }
 
+nav ul li:hover {
+  background-color: #d93b20;
+}
+
 nav ul li a {
   color: #fcfaf1;
   display: inline-block;
@@ -319,14 +368,6 @@ nav ul li a:hover {
 }
 
 .here {
-  background-color: #d93b20;
-}
-
-.not-here {
-  background-color: #333;
-}
-
-.not-here:hover {
   background-color: #d93b20;
 }
 
@@ -367,6 +408,12 @@ nav ul li a:hover {
 
 .hide-me:hover {
   color: transparent;
+}
+
+@media (max-width: 400px) {
+  .extra-pic {
+    width: 125px;
+  }
 }
 
 .blog-container {
@@ -422,4 +469,21 @@ header {
   margin: 200px auto;
   font-size: 40px;
   color: #fcfaf1;
+}
+
+.vidroll {
+  background-color: pink;
+  position: absolute;
+  margin-top: -50px;
+  margin-left: 80px;
+  height: 408px;
+  width: 200px;
+  background-size: cover;
+  background-position-y: -10px;
+  background-repeat: repeat-y;
+  box-shadow: 1px 1px 5px #888888;
+}
+
+#header, #blog {
+  box-shadow: 1px 1px 5px #888888;
 }
