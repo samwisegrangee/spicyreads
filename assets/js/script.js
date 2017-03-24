@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+  $('.navlink').click(function(){
+    $(this).addClass('here').delay(2000).queue(function(){
+      $(this).removeClass('here');
+    });
+  });
+
+
   //Smooth scrolling between ""#anchor" links.
   $('a[href^="#"]').on('click',function (e) {
       e.preventDefault();

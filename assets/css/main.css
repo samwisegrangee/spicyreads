@@ -321,8 +321,9 @@ a {
   color: #f49c27;
 }
 
-.twitter-logo:hover {
-  color: #555;
+.contact-link {
+  display: inline-block;
+  padding-bottom: 10px;
 }
 
 h1, h2, h3, h4, a {
@@ -351,6 +352,7 @@ nav ul li {
   display: inline-block;
   padding: 0px 10px;
   height: 100%;
+  transition: background-color 0.3s ease-out;
 }
 
 nav ul li:hover {
@@ -466,7 +468,7 @@ header {
 .header-overlay h1 {
   position: absolute;
   display: block;
-  margin: 200px auto;
+  margin: 150px auto;
   font-size: 40px;
   color: #fcfaf1;
 }
@@ -486,4 +488,15 @@ header {
 
 #header, #blog {
   box-shadow: 1px 1px 5px #888888;
+}
+
+@media (max-width: 400px) {
+  .vidroll {
+    height: 200px;
+    margin: 0 auto;
+    width: 300px;
+  }
+  .vidholder {
+    height: 180px;
+  }
 }
