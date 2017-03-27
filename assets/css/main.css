@@ -452,6 +452,18 @@ nav ul li a:hover {
   background-color: #79b89f;
 }
 
+table {
+  width: 100%;
+}
+
+td {
+  font-family: "Muli", sans-serif;
+}
+
+.contact-explain {
+  padding: 5px 20px;
+}
+
 header {
   margin-top: 40px;
   height: 500px;
