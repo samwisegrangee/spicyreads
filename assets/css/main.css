@@ -441,20 +441,41 @@ nav ul li a:hover {
   display: none;
 }
 
+.box .hidden-link {
+  color: #fcfaf1;
+  text-decoration: underline;
+}
+
 .top-left {
   background-color: #d93b20;
+}
+
+.top-left .hidden-link:hover {
+  color: #333;
 }
 
 .top-right {
   background-color: #f49c27;
 }
 
+.top-right .hidden-link:hover {
+  color: #ba0d04;
+}
+
 .bottom-left {
   background-color: #555;
 }
 
+.bottom-left .hidden-link:hover {
+  color: #d93b20;
+}
+
 .bottom-right {
   background-color: #79b89f;
+}
+
+.bottom-right .hidden-link:hover {
+  color: #ba0d04;
 }
 
 table {
