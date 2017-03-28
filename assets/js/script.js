@@ -43,6 +43,7 @@ $(document).ready(function() {
     $(".top-right").css({"height": bp, "width": sp});
     $(".bottom-left").css({"height": sp, "width": bp});
     $(".bottom-right").css({"height": sp, "width": sp});
+    $(this).find(".hidden-text").css("display", "block").delay(1000);
   });
     //Top Right
   $(".top-right").mouseover(function(){
@@ -50,6 +51,7 @@ $(document).ready(function() {
     $(this).css({"height": bp, "width": bp});
     $(".bottom-left").css({"height": sp, "width": sp});
     $(".bottom-right").css({"height": sp, "width": bp});
+    $(this).find(".hidden-text").css("display", "block").delay(1000);
   });
     //Bottom Left
   $(".bottom-left").mouseover(function(){
@@ -57,6 +59,7 @@ $(document).ready(function() {
     $(".top-right").css({"height": sp, "width": sp});
     $(this).css({"height": bp, "width": bp});
     $(".bottom-right").css({"height": bp, "width": sp});
+    $(this).find(".hidden-text").css("display", "block").delay(1000);
   });
     //Bottom Right
   $(".bottom-right").mouseover(function(){
@@ -64,21 +67,27 @@ $(document).ready(function() {
     $(".top-right").css({"height": sp, "width": bp});
     $(".bottom-left").css({"height": bp, "width": sp});
     $(this).css({"height": bp, "width": bp});
+    $(this).find(".hidden-text").css("display", "block").delay(1000);
   });
   $(".box").mouseout(function(){
-    $(".box").css({"height": "50%", "width": "50%"})
+    $(".box").css({"height": "50%", "width": "50%"});
+    $(".hidden-text").css("display", "none");
   });
 
-  //Vidroll
+  //Vidroll Scroll
   $(window).scroll(function() {
-    youtubeVidScroll();
+    vidScroll();
   });
 
-  function youtubeVidScroll() {
+  function vidScroll() {
 
     var wScroll = $(window).scrollTop();
 
     $('.vidroll').css('background-position-y','-'+ wScroll +'px');
   }
+
+  //Bouncing Contact Icons
+  $(".contact-icon").addClass("animated infinite pulse");
+
 
 });
