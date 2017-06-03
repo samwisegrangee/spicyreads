@@ -1,17 +1,96 @@
 header
   margin-top: 40px
-  height: 500px
-  background-size: cover
-  background-position: center
+  height: 100vh
+  overflow: hidden
 
-.header-overlay
+/*.title-overlay
   height: 100%
   width: 100%
-  background-color: rgba(0,0,0,0.5)
+  z-index: 5
 
-  h1
-    position: absolute
-    display: block
-    margin: 150px auto
-    font-size: 40px
+.title-bar
+  position: absolute
+  display: block
+  width: 100%
+  bottom: 4vh
+  left: 2vw
+
+.title-holder
+  padding: 15px
+  display: inline-block
+  background-color: rgba(0,0,0,0.5)
+  text-align: center
+  box-shadow: inset 0px 0px 0px 1px #eee
+
+  h1, h2
     color: $ed-cream-light
+  h1
+    font-size: 30px
+    letter-spacing: .45em
+    padding-left: .45em
+    margin-top: 5px
+  h2
+    font-size: 18px
+    letter-spacing: .15em
+
+.bounce-arrow
+  display: none
+
+#background_cycler
+  padding: 0
+  margin: 0
+  width: 100%
+  position: relative
+  top: 0
+  left: 0
+  z-index: -1
+
+#background_cycler img
+  position: absolute
+  left: 0
+  top: 0
+  min-height: 100vh
+  min-width: 100%
+  z-index: 1
+
+#background_cycler img.active
+  z-index: 3
+
+@media (max-width: 500px)
+  #background_cycler img
+    width: 100%
+    min-height: auto
+
+  .title-bar
+    position: absolute
+    width: 100%
+    text-align: center
+    left: 0
+    top: 10vh
+    bottom: 10vh
+
+    .title-holder
+      height: 65vh
+      padding-top: 10%
+
+      h2
+        position: relative
+
+  .arrow-container
+    position: absolute
+    width: 100%
+    height: 50px
+    top: 60vh
+    margin-left: auto
+    margin-right: auto
+    left: 0
+    right: 0
+
+  .bounce-arrow
+    display: block
+    margin: 0 auto
+    cursor: pointer
+
+@media (max-width: 375px)
+  .title-holder h2
+    font-size: 16px

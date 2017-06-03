@@ -1,5 +1,46 @@
-$(document).ready(function() {
+//Places Images in the Cycler depending on screen width
+function placeImages(){
+  var current_width = $(window).width();
 
+  if(current_width > 500){
+    $("#cycle-img-1").attr("src", "assets/img/ed-extra-pin-on-shirt.jpg");
+    $("#cycle-img-2").attr("src", "assets/img/ed-extra-bookstairs-h.jpg");
+    $("#cycle-img-3").attr("src", "assets/img/ed-headshot-h1.jpg");
+    $("#cycle-img-4").attr("src", "assets/img/ed-extra-coffee-book.jpg");
+  }
+
+  if(current_width < 500){
+    $("#cycle-img-1").attr("src", "assets/img/ed-reading-headshot.jpg");
+    $("#cycle-img-2").attr("src", "assets/img/ed-extra-book-picture.jpg");
+    $("#cycle-img-3").attr("src", "assets/img/ed-headshot-v1.jpg");
+    $("#cycle-img-4").attr("src", "assets/img/ed-extra-bookstairs-v.jpg");
+  }
+}
+//Cycling Function found on: http://www.simonbattersby.com/blog/cycling-a-src-with-jquery/
+function cycleImages(){
+      var $active = $('#background_cycler .active');
+      var $next = ($('#background_cycler .active').next().length > 0) ? $('#background_cycler .active').next() : $('#background_cycler img:first');
+
+      $next.css('z-index', 2);//move the next image up the pile
+	    $active.fadeOut(1400,function(){//fade out the top image
+	       $active.css('z-index', 1).show().removeClass('active');//reset the z-index and unhide the image
+         $next.css('z-index', 3).addClass('active');//make the next image the top one
+      });
+    }
+
+$(document).ready(function() {
+  placeImages();
+
+  $(window).resize(function() {
+    placeImages();
+  });
+
+  //Cycles between background images
+  $('#background_cycler').fadeIn(1400);//fade the background back in once all the images are loaded
+  // run every 7s
+  setInterval('cycleImages()', 6000);
+
+  //The orange hovers on nav options
   $('.navlink').click(function(){
     $(this).addClass('here').delay(2000).queue(function(){
       $(this).removeClass('here');
@@ -87,7 +128,5 @@ $(document).ready(function() {
   }
 
   //Bouncing Contact Icons
-  $(".contact-icon").addClass("animated infinite pulse");
-
-
+  $(".bounce").addClass("animated infinite pulse");
 });

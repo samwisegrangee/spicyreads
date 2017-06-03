@@ -1,23 +1,25 @@
 .vidroll
   background-color: pink
   position: absolute
-  margin-top: -50px
+  margin-top: -125vh
   margin-left: 80px
-  height: 408px
+  height: 200vh
   width: 200px
   background-size: cover
   background-position-y: -10px
   background-repeat: repeat-y
   box-shadow: 1px 1px 5px #888888
+  z-index: -1
 
-//Drop shadow makes
-#header, #blog
-  box-shadow: 1px 1px 5px #888888
-
-@media (max-width: 400px)
+@media (max-width: 767px)
   .vidroll
-    height: 200px
-    margin: 0 auto
-    width: 300px
-  .vidholder
-    height: 180px 
+    right: 0
+
+  #videos .l-twin
+    margin: 0 auto !important
+    float: none !important
+    background-color: rgba($ed-cream-light, 0.8)
+    box-shadow: 1px 1px 5px #888888
+  #videos .left-half
+      display: block
+      width: 100%
