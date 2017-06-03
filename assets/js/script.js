@@ -43,7 +43,7 @@ $(document).ready(function() {
   //The orange hovers on nav options
   $('.navlink').click(function(){
     $(this).addClass('here').delay(2000).queue(function(){
-      $(this).removeClass('here');
+      $('.navlink').removeClass('here');
     });
   });
 
