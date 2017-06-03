@@ -286,6 +286,7 @@ section {
 
 .right-half {
   float: right;
+  padding-bottom: 50px;
 }
 
 .twin {
@@ -301,7 +302,7 @@ section {
   float: left;
 }
 
-@media (max-width: 560px) {
+@media (max-width: 700px) {
   .left-half, .right-half {
     display: block;
     width: 100%;
@@ -309,6 +310,7 @@ section {
   .left-half, .right-half,
   .l-twin, .r-twin {
     float: none;
+    margin: 0 auto;
   }
 }
 
@@ -349,6 +351,24 @@ h1, h2, h3, h4, a {
 
 p {
   font-family: "Muli", sans-serif;
+}
+
+.signature-holder {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  padding: 20px;
+  color: #fcfaf1;
+  text-align: right;
+}
+
+.signature-holder a {
+  text-decoration: none;
+  color: #d93b20;
+}
+
+.signature-holder a:hover {
+  color: #ba0d04;
 }
 
 nav {
@@ -543,8 +563,8 @@ header {
   position: absolute;
   display: block;
   width: 100%;
-  bottom: 4vh;
-  left: 2vw;
+  bottom: 10vh;
+  left: 4vw;
 }
 
 .title-holder {
@@ -575,7 +595,7 @@ header {
   display: none;
 }
 
-#background_cycler {
+#home {
   padding: 0;
   margin: 0;
   width: 100%;
@@ -585,7 +605,7 @@ header {
   z-index: -1;
 }
 
-#background_cycler img {
+#home img {
   position: absolute;
   left: 0;
   top: 0;
@@ -594,12 +614,12 @@ header {
   z-index: 1;
 }
 
-#background_cycler img.active {
+#home img.active {
   z-index: 3;
 }
 
 @media (max-width: 500px) {
-  #background_cycler img {
+  #home img {
     width: 100%;
     min-height: auto;
   }

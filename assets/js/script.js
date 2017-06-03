@@ -18,8 +18,8 @@ function placeImages(){
 }
 //Cycling Function found on: http://www.simonbattersby.com/blog/cycling-a-src-with-jquery/
 function cycleImages(){
-      var $active = $('#background_cycler .active');
-      var $next = ($('#background_cycler .active').next().length > 0) ? $('#background_cycler .active').next() : $('#background_cycler img:first');
+      var $active = $('#home .active');
+      var $next = ($('#home .active').next().length > 0) ? $('#home .active').next() : $('#home img:first');
 
       $next.css('z-index', 2);//move the next image up the pile
 	    $active.fadeOut(1400,function(){//fade out the top image
@@ -36,16 +36,18 @@ $(document).ready(function() {
   });
 
   //Cycles between background images
-  $('#background_cycler').fadeIn(1400);//fade the background back in once all the images are loaded
+  $('#home').fadeIn(1400);//fade the background back in once all the images are loaded
   // run every 7s
   setInterval('cycleImages()', 6000);
 
   //The orange hovers on nav options
+  /*
   $('.navlink').click(function(){
     $(this).addClass('here').delay(2000).queue(function(){
       $('.navlink').removeClass('here');
     });
   });
+  */
 
 
   //Smooth scrolling between ""#anchor" links.
