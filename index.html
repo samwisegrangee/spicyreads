@@ -3,7 +3,6 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
     <link rel="stylesheet" href="assets/css/main.css" media="screen" title="no title">
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link href="https://fonts.googleapis.com/css?family=Muli|Playfair+Display" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
     <title>Spicy Reads</title>
@@ -11,6 +10,12 @@
   <body>
   <!--Nav-->
     <nav>
+      Secondary Nav
+    </nav>
+    <nav>
+      <div class="nav-second">
+        <h2>SPICY READS</h2>
+      </div>
       <ul>
         <li class="navlink"><a href="#home">Home</a></li>
         <li class="navlink"><a href="#about">About</a></li>
@@ -18,10 +23,12 @@
         <li class="navlink"><a href="#videos">Videos</a></li>
         <li class="navlink"><a href="#contact">Contact</a></li>
       </ul>
+      <div class="nav-right">
+        <h2>SPICY READS</h2>
+      </div>
     </nav>
 <!--Hero-->
-
-<div class="title-bar">
+<!--<div class="title-bar">
   <div class="title-holder">
     <h1>SPICY READS</h1>
     <h2>The personal site of Ed Spicer</h2>
@@ -33,7 +40,7 @@
       </a>
     </div>
   </div>
-</div>
+</div>-->
 
 <header id="home" style="display: block;">
 
@@ -61,26 +68,35 @@
        <div class="right-half">
          <div class="box-text twin r-twin">
            <h2>Hi, I'm Ed</h2>
-           <p>I retired after seventeen years in the first grade trenches in Allegan, Michigan.  Now you will find me doing my own writing, volunteering with students in several different places, doing freelance work, selecting books for various committees, and, of course, reading. <span class="read-more">Click here to read more.</span></p>
+           <p>I retired after seventeen years in the first grade trenches in Allegan, Michigan.  Now you will find me doing my own writing, volunteering with students in several different places, doing freelance work, selecting books for various committees, and, of course, reading.</p>
+           <a class="button read-more">Read More</a>
            <div class="q-box">
              <p class="q-explain"><br><br> I won a 2016 Outstanding People for Education award from the Allegan County School Board Association. I’m proud to be a Cool Teacher award winner for Grand Valley State University’s educational television station. <br><br> Over the years, I’ve taught a Graduate Young Adult Literature class, served on the Printz committee, the Caldecott committee, and many other book committees for the American Library Association. <br><br> I am a certified Reading Specialist, which has led to the publication of more than 45 curriculum guides for students of all ages for eight different publishers, most notably Houghton Mifflin’s Scientists in the Field series. <br><br> I founded the teen book review column for the Michigan Reading Association and now I am reviewing books for Horn Book magazine. <br><br> Please drop me a line with what you are reading; I always love hearing about books!</p>
-             <p class="close-it">Click to Close</p>
+             <a class="button close-it">Click to Close</a>
            </div>
          </div>
        </div>
      </div>
     </section>
 
-    <section class="trans-img" style="background-image: url('assets/img/ed-reading-outside.jpg');"></section>
+    <section class="trans-img" style="background-image: url('assets/img/ed-headshot-h1.jpg');"></section>
 
 <!--Blog-->
     <section class="dark-box" id="blog">
       <div class="nav-space"></div>
-      <div class="center">
-        <h2>Follow my blog</h2>
-        <p>I have things to say about books, education, and the authors or illustrators who create these books for children and teens. Also, I am retired and over sixty, which means that I get to be crotchety and say whatever the hell I want about books, authors, illustrators, or education. I hope this blog takes you on a journey. I hope it surprises you. I hope you discover that Spicyreads is one strange ranger—but one ultimately with a very kind heart. <a href="https://medium.com/spicy-reads" target="_blank">Click here to visit my blog.</a></p>
+      <div class="half-holder">
+        <div class="left-half">
+          <div class="box-text twin l-twin">
+            <h2>Follow my blog</h2>
+            <p>I have things to say about books, education, and the authors or illustrators who create these books for children and teens. Also, I am retired and over sixty, which means that I get to be crotchety and say whatever the hell I want about books, authors, illustrators, or education. I hope this blog takes you on a journey. I hope it surprises you. I hope you discover that Spicyreads is one strange ranger—but one ultimately with a very kind heart.</p>
 
-        <div class="blog-container">
+            <a class="button" href="https://medium.com/spicy-reads" target="_blank">Visit My Blog</a>
+          </div>
+        </div>
+
+
+        <div class="right-half">
+          <div class="box-text twin r-twin blog-container">
           <!--Put in Links to Medium Tags when ready-->
           <div class="top-left box">
             <p>Reviews</p>
@@ -92,12 +108,13 @@
           </div>
           <div class="bottom-left box">
             <p>Authors</p>
-            <p class="hidden-text">We need diverse books, especially those written and illustrated by people of color and Native authors and illustrators. Knowing the people who create these stories is as important as knowing the story. <a class="hidden-link" href="https://medium.com/spicy-reads/tagged/authors">Click here for more...</a></p>
+            <p class="hidden-text">We need diverse books, written and illustrated by diverse people. Knowing the people who create these stories is as important as knowing the story. <a class="hidden-link" href="https://medium.com/spicy-reads/tagged/authors">Click here for more...</a></p>
           </div>
           <div class="bottom-right box">
             <p>More</p><p class="hidden-text">Don't you always wish for more? I'm sure blogging has more to show me, and you. <a class="hidden-link" href="https://medium.com/spicy-reads" target="_blank">Click here for more...</a></p></div>
         </div>
       </div>
+    </div>
       <div class="nav-space"></div>
     </section>
 
@@ -110,7 +127,8 @@
         <div class="left-half">
          <div class="box-text twin l-twin">
           <h2>I've recorded a lot of videos</h2>
-          <p>My goal interviewing authors or illustrators on video is to capture something essential about their work or about them personally and, with luck, both. Before doing the video, I do my research. I know their work, I have read interviews. I have read what others have written about them. When I do my video, I am hoping that it offers something fresh and interesting. <br><a href="https://www.youtube.com/user/spicyguyreader" target="_blank">Click here to visit my YouTube Channel.</a></p>
+          <p>My goal interviewing authors or illustrators on video is to capture something essential about their work or about them personally and, with luck, both. Before doing the video, I do my research. I know their work, I have read interviews. I have read what others have written about them. When I do my video, I am hoping that it offers something fresh and interesting.</p>
+          <a class="button" href="https://www.youtube.com/user/spicyguyreader" target="_blank">Watch My Videos</a>
          </div>
        </div>
 
@@ -191,6 +209,5 @@
     </footer>
   </body>
   <script type="text/javascript" src="assets/js/jquery-3.0.0.min.js"></script>﻿
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script type="text/javascript" src="assets/js/script.js"></script>
 </html>

@@ -7,19 +7,46 @@ a
   -o-transition: color .5s linear
   transition: color .5s linear
 
-.dark-box
+//.dark-box
   a
     color: $ed-yellow
 
-    &:hover
+    //&:hover
       color: $ed-orange-dark
 
-.light-box
+//.light-box
   a
     color: $ed-orange-dark
 
-    &:hover
+    //&:hover
       color: $ed-yellow
+.button
+  display: inline-block
+  border: 2px solid
+  padding: 5px 15px
+  font-family: $body-font
+  text-align: center
+
+.light-box
+  .button
+    border-color: $ed-orange-dark
+    color: $ed-orange-dark
+
+    &:hover
+      background-color: $ed-orange-dark
+      color: $ed-cream-dark
+
+.dark-box
+  .button
+    border-color: $ed-yellow
+    color: $ed-yellow
+
+    &:hover
+      background-color: $ed-yellow
+      color: $ed-cream-dark
+
+.read-more, .close-it
+  color: $ed-orange-dark
 
 .contact-link
   display: inline-block

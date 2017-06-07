@@ -1,5 +1,4 @@
 nav
-  height: 40px
   width: 100%
   top: 0
   background-color: $ed-grey-dark
@@ -9,12 +8,12 @@ nav
   ul
     list-style: none
     display: inline
-    margin: 0 auto
     transition: all 0.3s ease-out
+    padding: 0
 
     li
       display: inline-block
-      padding: 0px 10px
+      padding: 5px 10px
       height: 100%
       transition: background-color 0.3s ease-out
 
@@ -24,7 +23,6 @@ nav
       a
         color: $ed-cream-light
         display: inline-block
-        margin-top: 8px
 
         &:hover
           color: $ed-cream-dark
@@ -32,10 +30,34 @@ nav
 .here
   background-color: $ed-orange-light
 
-@media (max-width: 400px)
-  nav ul
-    padding-left: 10px
+.nav-right
+  display: inline
+  position: absolute
+  padding: 0px 10px
+  right: 15px
+  border-left: 1px solid $ed-cream-light
+  border-right: 1px solid $ed-cream-light
+  margin-top: -1px
 
-    li
-      font-size: 12px
-      padding: 0px 5px
+.nav-right h2, .nav-second h2
+    font-weight: lighter
+    color: $ed-cream-light
+    letter-spacing: 0.3em
+    margin: 0
+
+.nav-second
+  display: none
+  text-align: center
+
+@media (max-width: 768px)
+  nav
+    text-align: center
+    ul
+      border-top: 1px solid $ed-cream-light
+      padding-top: 10px
+
+  .nav-right
+    display: none
+  .nav-second
+    display: block
+    margin: 0 0 5px 0

@@ -5,7 +5,7 @@ function placeImages(){
   if(current_width > 500){
     $("#cycle-img-1").attr("src", "assets/img/ed-extra-pin-on-shirt.jpg");
     $("#cycle-img-2").attr("src", "assets/img/ed-extra-bookstairs-h.jpg");
-    $("#cycle-img-3").attr("src", "assets/img/ed-headshot-h1.jpg");
+    $("#cycle-img-3").attr("src", "assets/img/ed-reading-outside.jpg");
     $("#cycle-img-4").attr("src", "assets/img/ed-extra-coffee-book.jpg");
   }
 
