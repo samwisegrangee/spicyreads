@@ -7,19 +7,6 @@ a
   -o-transition: color .5s linear
   transition: color .5s linear
 
-//.dark-box
-  a
-    color: $ed-yellow
-
-    //&:hover
-      color: $ed-orange-dark
-
-//.light-box
-  a
-    color: $ed-orange-dark
-
-    //&:hover
-      color: $ed-yellow
 .button
   display: inline-block
   border: 2px solid
@@ -38,12 +25,13 @@ a
 
 .dark-box
   .button
-    border-color: $ed-yellow
-    color: $ed-yellow
+    background-color: $ed-grey-dark
+    color: $ed-cream-dark
+    border: none
 
     &:hover
-      background-color: $ed-yellow
-      color: $ed-cream-dark
+      background-color: $ed-cream-dark
+      color: $ed-grey-dark
 
 .read-more, .close-it
   color: $ed-orange-dark

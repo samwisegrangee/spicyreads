@@ -4,6 +4,7 @@
   margin: 0 auto
 
 .box
+  position: relative
   height: 50%
   width: 50%
   float: left
@@ -12,32 +13,50 @@
   color: $ed-cream-light
 
   p
-    padding: 0px 20px
+    margin-top: 5px
+    padding: 0px 10px
 
   .hidden-text
     display: none
-    font-size: 13px
+    font-size: 12px
 
-  .hidden-link
-    color: $ed-cream-light
-    text-decoration: underline
+.slide-button
+  display: inline-block
+  background-color: $ed-cream-light
+  color: $ed-grey-dark
+  text-decoration: none
+  position: absolute
+  text-align: center
+  padding: 10px 0
+  width: 50%
+  right: -100%
+  bottom: 0
+  transition: all 0.5s ease-in-out
+
+  &:hover
+    background-color: $ed-grey-dark
+    color: #eee
+
 
 .top-left
   background-color: $ed-orange-light
-  .hidden-link:hover
-    color: $ed-grey-dark
 
 .top-right
   background-color: $ed-yellow
-  .hidden-link:hover
-    color: $ed-orange-dark
 
 .bottom-left
   background-color: $ed-grey-light
-  .hidden-link:hover
-    color: $ed-orange-light
 
 .bottom-right
   background-color: $ed-green-light
-  .hidden-link:hover
-    color: $ed-orange-dark
+
+#mobile-blog-cta
+  display: none
+
+@media (max-width: 700px)
+  #mobile-blog-cta
+    display: block
+    margin-top: 20px
+
+  #desktop-blog-cta
+    display: none

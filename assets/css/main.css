@@ -219,10 +219,6 @@ th {
   padding: 0;
 }
 
-* {
-  transition: all 0.5s ease-in-out;
-}
-
 body {
   background-color: #fcfaf1;
   font-size: 14px;
@@ -263,6 +259,7 @@ section {
 }
 
 .pic {
+  width: 95%;
   box-shadow: 1px 1px 5px #888888;
 }
 
@@ -344,13 +341,14 @@ a {
 }
 
 .dark-box .button {
-  border-color: #f49c27;
-  color: #f49c27;
+  background-color: #333;
+  color: #f5f0d8;
+  border: none;
 }
 
 .dark-box .button:hover {
-  background-color: #f49c27;
-  color: #f5f0d8;
+  background-color: #f5f0d8;
+  color: #333;
 }
 
 .read-more, .close-it {
@@ -382,6 +380,7 @@ p, button {
 .signature-holder a {
   text-decoration: none;
   color: #d93b20;
+  font-weight: bold;
 }
 
 .signature-holder a:hover {
@@ -427,14 +426,19 @@ nav ul li a:hover {
   background-color: #d93b20;
 }
 
+.nav-holder {
+  max-width: 800px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
 .nav-right {
-  display: inline;
-  position: absolute;
+  display: inline-block;
+  float: right;
+  position: relative;
   padding: 0px 10px;
-  right: 15px;
   border-left: 1px solid #fcfaf1;
   border-right: 1px solid #fcfaf1;
-  margin-top: -1px;
 }
 
 .nav-right h2, .nav-second h2 {
@@ -457,6 +461,9 @@ nav ul li a:hover {
     border-top: 1px solid #fcfaf1;
     padding-top: 10px;
   }
+  .nav-holder {
+    padding: 0;
+  }
   .nav-right {
     display: none;
   }
@@ -468,8 +475,8 @@ nav ul li a:hover {
 
 .q-box {
   cursor: pointer;
-  height: 0px;
   width: 100%;
+  height: 0;
   text-align: left;
   overflow: hidden;
   margin-bottom: 10px;
@@ -479,17 +486,16 @@ nav ul li a:hover {
   margin-top: -50px;
 }
 
-.big {
-  height: 100%;
+.q-box {
+  transition: height 1s ease-in;
 }
 
-.hide-me {
-  opacity: 0;
-}
-
-@media (max-width: 400px) {
+@media (max-width: 700px) {
   .extra-pic {
-    width: 125px;
+    width: 140px;
+  }
+  .l-twin .q-box {
+    height: 140px !important;
   }
 }
 
@@ -500,6 +506,7 @@ nav ul li a:hover {
 }
 
 .box {
+  position: relative;
   height: 50%;
   width: 50%;
   float: left;
@@ -509,49 +516,62 @@ nav ul li a:hover {
 }
 
 .box p {
-  padding: 0px 20px;
+  margin-top: 5px;
+  padding: 0px 10px;
 }
 
 .box .hidden-text {
   display: none;
-  font-size: 13px;
+  font-size: 12px;
 }
 
-.box .hidden-link {
-  color: #fcfaf1;
-  text-decoration: underline;
+.slide-button {
+  display: inline-block;
+  background-color: #fcfaf1;
+  color: #333;
+  text-decoration: none;
+  position: absolute;
+  text-align: center;
+  padding: 10px 0;
+  width: 50%;
+  right: -100%;
+  bottom: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.slide-button:hover {
+  background-color: #333;
+  color: #eee;
 }
 
 .top-left {
   background-color: #d93b20;
 }
 
-.top-left .hidden-link:hover {
-  color: #333;
-}
-
 .top-right {
   background-color: #f49c27;
-}
-
-.top-right .hidden-link:hover {
-  color: #ba0d04;
 }
 
 .bottom-left {
   background-color: #555;
 }
 
-.bottom-left .hidden-link:hover {
-  color: #d93b20;
-}
-
 .bottom-right {
   background-color: #79b89f;
 }
 
-.bottom-right .hidden-link:hover {
-  color: #ba0d04;
+#mobile-blog-cta {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  #mobile-blog-cta {
+    display: block;
+    margin-top: 20px;
+  }
+  #desktop-blog-cta {
+    display: none;
+  }
 }
 
 table {
@@ -640,6 +660,7 @@ header {
 
 #home img {
   position: absolute;
+  margin: 0 auto;
   left: 0;
   top: 0;
   min-width: 100%;

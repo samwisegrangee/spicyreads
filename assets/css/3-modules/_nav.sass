@@ -30,20 +30,24 @@ nav
 .here
   background-color: $ed-orange-light
 
+.nav-holder
+  max-width: 800px
+  padding: 0 40px
+  margin: 0 auto
+
 .nav-right
-  display: inline
-  position: absolute
+  display: inline-block
+  float: right
+  position: relative
   padding: 0px 10px
-  right: 15px
   border-left: 1px solid $ed-cream-light
   border-right: 1px solid $ed-cream-light
-  margin-top: -1px
 
 .nav-right h2, .nav-second h2
-    font-weight: lighter
-    color: $ed-cream-light
-    letter-spacing: 0.3em
-    margin: 0
+  font-weight: lighter
+  color: $ed-cream-light
+  letter-spacing: 0.3em
+  margin: 0
 
 .nav-second
   display: none
@@ -55,9 +59,13 @@ nav
     ul
       border-top: 1px solid $ed-cream-light
       padding-top: 10px
+      
+  .nav-holder
+    padding: 0
 
   .nav-right
     display: none
+
   .nav-second
     display: block
     margin: 0 0 5px 0

@@ -66,16 +66,18 @@ $(document).ready(function() {
 
   //Toggles the size of the Bio boxes
   $(".read-more").click(function(){
-    $(".q-box").addClass("big", 1000);
-    $(".read-more").addClass("hide-me", 1000);
+    var height = $(".q-explain").css("height");
+    
+    $(".q-box").css("height", height);
+    $(".read-more").css("display", "none");
   });
   $(".q-box").click(function(){
-    $(".q-box").removeClass("big", 1000);
-    $(".read-more").removeClass("hide-me", 1000);
+    $(".q-box").css("height", "0");
+    $(".read-more").css("display", "inline-block");
   });
 
   //"Swellbox" Blog Grid
-  var bg = 75; //Just set how big you want the zoom to be
+  var bg = 70; //Just set how big you want the zoom to be
   var sm = 100 - bg; //Sets the amount remaining
   var bp = bg + "%"; //Adds percentage to big one
   var sp = sm + "%"; //Adds percentage to small one
@@ -86,7 +88,8 @@ $(document).ready(function() {
     $(".top-right").css({"height": bp, "width": sp});
     $(".bottom-left").css({"height": sp, "width": bp});
     $(".bottom-right").css({"height": sp, "width": sp});
-    $(this).find(".hidden-text").css("display", "block").delay(1000);
+    $(".hidden-text", this).css("display", "block").delay(1000);
+    $(".slide-button", this).css("right", "0");
   });
     //Top Right
   $(".top-right").mouseover(function(){
@@ -94,7 +97,8 @@ $(document).ready(function() {
     $(this).css({"height": bp, "width": bp});
     $(".bottom-left").css({"height": sp, "width": sp});
     $(".bottom-right").css({"height": sp, "width": bp});
-    $(this).find(".hidden-text").css("display", "block").delay(1000);
+    $(".hidden-text", this).css("display", "block").delay(1000);
+    $(".slide-button", this).css("right", "0");
   });
     //Bottom Left
   $(".bottom-left").mouseover(function(){
@@ -102,7 +106,8 @@ $(document).ready(function() {
     $(".top-right").css({"height": sp, "width": sp});
     $(this).css({"height": bp, "width": bp});
     $(".bottom-right").css({"height": bp, "width": sp});
-    $(this).find(".hidden-text").css("display", "block").delay(1000);
+    $(".hidden-text", this).css("display", "block").delay(1000);
+    $(".slide-button", this).css("right", "0");
   });
     //Bottom Right
   $(".bottom-right").mouseover(function(){
@@ -110,11 +115,13 @@ $(document).ready(function() {
     $(".top-right").css({"height": sp, "width": bp});
     $(".bottom-left").css({"height": bp, "width": sp});
     $(this).css({"height": bp, "width": bp});
-    $(this).find(".hidden-text").css("display", "block").delay(1000);
+    $(".hidden-text", this).css("display", "block").delay(1000);
+    $(".slide-button", this).css("right", "0");
   });
   $(".box").mouseout(function(){
     $(".box").css({"height": "50%", "width": "50%"});
     $(".hidden-text").css("display", "none");
+    $(".slide-button").css("right", "-100%");
   });
 
   //Vidroll Scroll
