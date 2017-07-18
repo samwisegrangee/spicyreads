@@ -361,13 +361,25 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 2000px) {
   html {
-    font-size: 26px;
+    font-size: 28px;
   }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 980px) and (max-width: 1999px) {
+  html {
+    font-size: 23px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 479px) and (max-width: 767px) {
   html {
     font-size: 20px;
   }
@@ -376,12 +388,6 @@ html {
 @media (max-width: 480px) {
   html {
     font-size: 14px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 979px) {
-  html {
-    font-size: 22px;
   }
 }
 
@@ -401,24 +407,6 @@ h1, h2, h3, h4, a {
 
 p, button {
   font-family: "Muli", sans-serif;
-}
-
-@media (min-width: 1200px) {
-  p .box p, p .hidden-text, button .box p, button .hidden-text {
-    font-size: 17px !important;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 979px) {
-  p .box p, p .hidden-text, button .box p, button .hidden-text {
-    font-size: 14px !important;
-  }
-}
-
-@media (max-width: 480px) {
-  p .box p, p .hidden-text, button .box p, button .hidden-text {
-    font-size: 12px !important;
-  }
 }
 
 .signature-holder {
@@ -547,7 +535,6 @@ nav ul li a:hover {
 }
 
 .blog-container {
-  height: 300px;
   margin: 0 auto;
 }
 

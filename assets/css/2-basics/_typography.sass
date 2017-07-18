@@ -4,18 +4,22 @@ html
   font-family: sans-serif
   color: $ed-grey-dark
   -webkit-font-smoothing: antialiased
-  //Large desktop
-  @media (min-width: 1200px)
-    font-size: 26px
+  //Ridiculously Large Desktop
+  @media (min-width: 2000px)
+    font-size: 28px
+  // Large Desktop
+  @media (min-width: 980px) and (max-width: 1999px)
+    font-size: 23px
+  //Portrait tablet to landscape and Sesktop
+  @media (min-width: 768px) and (max-width: 979px)
+    font-size: 22px
   //Landscape phone to portrait tablet
-  @media (max-width: 767px)
+  @media (min-width: 479px) and (max-width: 767px)
     font-size: 20px
   // Landscape phones and down
   @media (max-width: 480px)
     font-size: 14px
-  //Portrait tablet to landscape and desktop
-  @media (min-width: 768px) and (max-width: 979px)
-    font-size: 22px
+
 
 h1, h2, h3, h4, h5, h6, p, ul, ol, .hidden-text
   margin-top: 0
@@ -30,16 +34,3 @@ h1, h2, h3, h4, a
 
 p, button
   font-family: $body-font
-
-
-  @media (min-width: 1200px)
-    .box p, .hidden-text
-      font-size: 17px !important
-  //Landscape phone to portrait tablet
-  @media (min-width: 768px) and (max-width: 979px)
-    .box p, .hidden-text
-      font-size: 14px !important
-  // Landscape phones and down
-  @media (max-width: 480px)
-    .box p, .hidden-text
-      font-size: 12px !important

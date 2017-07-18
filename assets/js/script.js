@@ -82,6 +82,10 @@ $(document).ready(function() {
   var bp = bg + "%"; //Adds percentage to big one
   var sp = sm + "%"; //Adds percentage to small one
 
+  var divHeight = $('#blog .l-twin').height(),
+      newHeight = divHeight * 1.2;
+
+  $('.blog-container').css('height', newHeight +'px');
   //Top Left
   $(".top-left").mouseover(function(){
     $(this).css({"height": bp, "width": bp});
