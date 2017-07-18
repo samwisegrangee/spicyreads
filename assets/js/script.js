@@ -2,14 +2,14 @@
 function placeImages(){
   var current_width = $(window).width();
 
-  if(current_width > 500){
+  if(current_width > 700){
     $("#cycle-img-1").attr("src", "assets/img/ed-extra-pin-on-shirt.jpg");
     $("#cycle-img-2").attr("src", "assets/img/ed-extra-bookstairs-h.jpg");
     $("#cycle-img-3").attr("src", "assets/img/ed-reading-outside.jpg");
     $("#cycle-img-4").attr("src", "assets/img/ed-extra-coffee-book.jpg");
   }
 
-  if(current_width < 500){
+  if(current_width < 700){
     $("#cycle-img-1").attr("src", "assets/img/ed-reading-headshot.jpg");
     $("#cycle-img-2").attr("src", "assets/img/ed-extra-book-picture.jpg");
     $("#cycle-img-3").attr("src", "assets/img/ed-headshot-v1.jpg");
@@ -67,7 +67,7 @@ $(document).ready(function() {
   //Toggles the size of the Bio boxes
   $(".read-more").click(function(){
     var height = $(".q-explain").css("height");
-    
+
     $(".q-box").css("height", height);
     $(".read-more").css("display", "none");
   });
@@ -88,7 +88,7 @@ $(document).ready(function() {
     $(".top-right").css({"height": bp, "width": sp});
     $(".bottom-left").css({"height": sp, "width": bp});
     $(".bottom-right").css({"height": sp, "width": sp});
-    $(".hidden-text", this).css("display", "block").delay(1000);
+    $(".hidden-text", this).css("display", "inline-block").delay(1000);
     $(".slide-button", this).css("right", "0");
   });
     //Top Right
@@ -97,7 +97,7 @@ $(document).ready(function() {
     $(this).css({"height": bp, "width": bp});
     $(".bottom-left").css({"height": sp, "width": sp});
     $(".bottom-right").css({"height": sp, "width": bp});
-    $(".hidden-text", this).css("display", "block").delay(1000);
+    $(".hidden-text", this).css("display", "inline-block").delay(1000);
     $(".slide-button", this).css("right", "0");
   });
     //Bottom Left
@@ -106,7 +106,7 @@ $(document).ready(function() {
     $(".top-right").css({"height": sp, "width": sp});
     $(this).css({"height": bp, "width": bp});
     $(".bottom-right").css({"height": bp, "width": sp});
-    $(".hidden-text", this).css("display", "block").delay(1000);
+    $(".hidden-text", this).css("display", "inline-block").delay(1000);
     $(".slide-button", this).css("right", "0");
   });
     //Bottom Right
@@ -115,7 +115,7 @@ $(document).ready(function() {
     $(".top-right").css({"height": sp, "width": bp});
     $(".bottom-left").css({"height": bp, "width": sp});
     $(this).css({"height": bp, "width": bp});
-    $(".hidden-text", this).css("display", "block").delay(1000);
+    $(".hidden-text", this).css("display", "inline-block").delay(1000);
     $(".slide-button", this).css("right", "0");
   });
   $(".box").mouseout(function(){

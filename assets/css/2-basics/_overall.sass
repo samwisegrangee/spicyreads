@@ -1,11 +1,5 @@
 body
   background-color: $ed-cream-light
-  font-size: 14px
-  line-height: 1.6
-  font-family: sans-serif
-  color: $ed-grey-dark
-  -webkit-font-smoothing: antialiased
-  -webkit-text-size-adjust: 100%
 
 footer
   background-color: $ed-grey-dark
@@ -18,22 +12,18 @@ footer
 
 section
   overflow: auto
-  min-height: 500px
+  min-height: 50vh
 
 .trans-img
-  height: 500px
+  height: 75vh
   width: 100%
   background-color: rgba(0, 0, 0, 0.5)
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+  //box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
   background-size: cover
   background-position: center
 
-//Drop shadow makes
-//#header, #blog
-  //box-shadow: 1px 1px 5px #888888
-
 .nav-space
-  height: 80px
+  height: 2em
 
 .pic
   width: 95%
@@ -41,13 +31,14 @@ section
 
 //Single Column
 .center
-  max-width: 400px
+  max-width: 80%
   margin: 0 auto
-  padding: 10px
+  padding: 2em
 
 //Double Column
 .half-holder
   width: 100%
+
 
 .left-half, .right-half
   display: inline-block
@@ -58,19 +49,19 @@ section
 
 .right-half
   float: right
-  padding-bottom: 50px
 
 .twin
-  width: 300px
-  padding: 10px
+  width: 80%
+  padding-bottom: 2em
 
 .l-twin
   float: right
+  padding-right: 1em
 
 .r-twin
   float: left
 
-@media (max-width: 700px)
+@media (max-width: 768px)
   .left-half, .right-half
     display: block
     width: 100%
@@ -79,3 +70,17 @@ section
   .l-twin, .r-twin
     float: none
     margin: 0 auto
+
+
+  //Landscape phone to portrait tablet
+  //@media (max-width: 767px)
+    font-size: 20px
+  // Landscape phones and down
+  //@media (max-width: 480px)
+    font-size: 14px
+  //Portrait tablet to landscape and desktop
+  //@media (min-width: 768px) and (max-width: 979px)
+    font-size: 24px
+  //Large desktop
+  //@media (min-width: 1200px)
+    font-size: 30px

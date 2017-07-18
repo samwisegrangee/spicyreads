@@ -1,5 +1,4 @@
 .blog-container
-  max-width: 400px
   height: 300px
   margin: 0 auto
 
@@ -14,11 +13,12 @@
 
   p
     margin-top: 5px
+    margin-bottom: 0.4em
     padding: 0px 10px
 
   .hidden-text
+    margin-top: 0
     display: none
-    font-size: 12px
 
 .slide-button
   display: inline-block
@@ -27,7 +27,7 @@
   text-decoration: none
   position: absolute
   text-align: center
-  padding: 10px 0
+  padding: 0.1em 0
   width: 50%
   right: -100%
   bottom: 0
@@ -37,6 +37,22 @@
     background-color: $ed-grey-dark
     color: #eee
 
+.blog-header, .blog-footer
+  display: block
+  padding: 1em
+  background-color: $ed-grey-dark
+
+.blog-cta
+  display: inline-block
+  padding: 0.2em 1em
+  color: inherit
+  border: 1px solid $ed-cream-light
+
+  &:hover
+    border: $ed-orange-light
+
+.blog-footer
+  padding: 1.1em
 
 .top-left
   background-color: $ed-orange-light
@@ -49,14 +65,3 @@
 
 .bottom-right
   background-color: $ed-green-light
-
-#mobile-blog-cta
-  display: none
-
-@media (max-width: 700px)
-  #mobile-blog-cta
-    display: block
-    margin-top: 20px
-
-  #desktop-blog-cta
-    display: none

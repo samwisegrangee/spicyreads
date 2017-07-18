@@ -14,7 +14,7 @@ nav
     li
       display: inline-block
       padding: 5px 10px
-      height: 100%
+      height: 2em
       transition: background-color 0.3s ease-out
 
       &:hover
@@ -31,7 +31,7 @@ nav
   background-color: $ed-orange-light
 
 .nav-holder
-  max-width: 800px
+  max-width: 1400px
   padding: 0 40px
   margin: 0 auto
 
@@ -47,19 +47,21 @@ nav
   font-weight: lighter
   color: $ed-cream-light
   letter-spacing: 0.3em
+  line-height: 1.5em
   margin: 0
 
 .nav-second
   display: none
   text-align: center
 
-@media (max-width: 768px)
+
+@media (max-width: 979px)
   nav
     text-align: center
     ul
       border-top: 1px solid $ed-cream-light
       padding-top: 10px
-      
+
   .nav-holder
     padding: 0
 

@@ -221,12 +221,6 @@ th {
 
 body {
   background-color: #fcfaf1;
-  font-size: 14px;
-  line-height: 1.6;
-  font-family: sans-serif;
-  color: #333;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
 }
 
 footer {
@@ -242,20 +236,19 @@ footer {
 
 section {
   overflow: auto;
-  min-height: 500px;
+  min-height: 50vh;
 }
 
 .trans-img {
-  height: 500px;
+  height: 75vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   background-size: cover;
   background-position: center;
 }
 
 .nav-space {
-  height: 80px;
+  height: 2em;
 }
 
 .pic {
@@ -264,9 +257,9 @@ section {
 }
 
 .center {
-  max-width: 400px;
+  max-width: 80%;
   margin: 0 auto;
-  padding: 10px;
+  padding: 2em;
 }
 
 .half-holder {
@@ -284,23 +277,23 @@ section {
 
 .right-half {
   float: right;
-  padding-bottom: 50px;
 }
 
 .twin {
-  width: 300px;
-  padding: 10px;
+  width: 80%;
+  padding-bottom: 2em;
 }
 
 .l-twin {
   float: right;
+  padding-right: 1em;
 }
 
 .r-twin {
   float: left;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .left-half, .right-half {
     display: block;
     width: 100%;
@@ -360,12 +353,72 @@ a {
   padding-bottom: 10px;
 }
 
+html {
+  font-weight: 200;
+  line-height: 1.5;
+  font-family: sans-serif;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, .hidden-text {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+
 h1, h2, h3, h4, a {
   font-family: "Playfair Display", serif;
 }
 
 p, button {
   font-family: "Muli", sans-serif;
+}
+
+@media (min-width: 1200px) {
+  p .box p, p .hidden-text, button .box p, button .hidden-text {
+    font-size: 17px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  p .box p, p .hidden-text, button .box p, button .hidden-text {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  p .box p, p .hidden-text, button .box p, button .hidden-text {
+    font-size: 12px !important;
+  }
 }
 
 .signature-holder {
@@ -405,7 +458,7 @@ nav ul {
 nav ul li {
   display: inline-block;
   padding: 5px 10px;
-  height: 100%;
+  height: 2em;
   transition: background-color 0.3s ease-out;
 }
 
@@ -427,7 +480,7 @@ nav ul li a:hover {
 }
 
 .nav-holder {
-  max-width: 800px;
+  max-width: 1400px;
   padding: 0 40px;
   margin: 0 auto;
 }
@@ -445,6 +498,7 @@ nav ul li a:hover {
   font-weight: lighter;
   color: #fcfaf1;
   letter-spacing: 0.3em;
+  line-height: 1.5em;
   margin: 0;
 }
 
@@ -453,7 +507,7 @@ nav ul li a:hover {
   text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 979px) {
   nav {
     text-align: center;
   }
@@ -482,25 +536,17 @@ nav ul li a:hover {
   margin-bottom: 10px;
 }
 
-.q-explain {
-  margin-top: -50px;
-}
-
 .q-box {
   transition: height 1s ease-in;
 }
 
-@media (max-width: 700px) {
-  .extra-pic {
-    width: 140px;
-  }
+@media (max-width: 767px) {
   .l-twin .q-box {
-    height: 140px !important;
+    height: 0 !important;
   }
 }
 
 .blog-container {
-  max-width: 400px;
   height: 300px;
   margin: 0 auto;
 }
@@ -517,12 +563,13 @@ nav ul li a:hover {
 
 .box p {
   margin-top: 5px;
+  margin-bottom: 0.4em;
   padding: 0px 10px;
 }
 
 .box .hidden-text {
+  margin-top: 0;
   display: none;
-  font-size: 12px;
 }
 
 .slide-button {
@@ -532,7 +579,7 @@ nav ul li a:hover {
   text-decoration: none;
   position: absolute;
   text-align: center;
-  padding: 10px 0;
+  padding: 0.1em 0;
   width: 50%;
   right: -100%;
   bottom: 0;
@@ -542,6 +589,27 @@ nav ul li a:hover {
 .slide-button:hover {
   background-color: #333;
   color: #eee;
+}
+
+.blog-header, .blog-footer {
+  display: block;
+  padding: 1em;
+  background-color: #333;
+}
+
+.blog-cta {
+  display: inline-block;
+  padding: 0.2em 1em;
+  color: inherit;
+  border: 1px solid #fcfaf1;
+}
+
+.blog-cta:hover {
+  border: #d93b20;
+}
+
+.blog-footer {
+  padding: 1.1em;
 }
 
 .top-left {
@@ -560,20 +628,6 @@ nav ul li a:hover {
   background-color: #79b89f;
 }
 
-#mobile-blog-cta {
-  display: none;
-}
-
-@media (max-width: 700px) {
-  #mobile-blog-cta {
-    display: block;
-    margin-top: 20px;
-  }
-  #desktop-blog-cta {
-    display: none;
-  }
-}
-
 table {
   width: 100%;
 }
@@ -583,13 +637,13 @@ td {
 }
 
 .icon-box {
-  height: 30px;
-  width: 30px;
+  height: 2em;
+  width: 2.2em;
 }
 
 .contact-icon {
-  height: 24px;
-  width: 24px;
+  height: 1.8em;
+  width: 1.8em;
   transition: all 0.3s ease-out;
 }
 
@@ -660,6 +714,8 @@ header {
 
 #home img {
   position: absolute;
+  display: block;
+  float: none;
   margin: 0 auto;
   left: 0;
   top: 0;
@@ -721,7 +777,7 @@ header {
   margin-top: -125vh;
   margin-left: 80px;
   height: 200vh;
-  width: 200px;
+  width: 30vw;
   background-size: cover;
   background-position-y: -10px;
   background-repeat: repeat-y;
