@@ -363,17 +363,17 @@ html {
 
 @media (min-width: 2000px) {
   html {
-    font-size: 28px;
+    font-size: 34px;
   }
 }
 
-@media (min-width: 980px) and (max-width: 1999px) {
+@media (min-width: 1201px) and (max-width: 1999px) {
   html {
-    font-size: 23px;
+    font-size: 26px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 768px) and (max-width: 1200px) {
   html {
     font-size: 22px;
   }
