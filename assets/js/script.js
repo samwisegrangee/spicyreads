@@ -27,12 +27,24 @@ function cycleImages(){
          $next.css('z-index', 3).addClass('active');//make the next image the top one
       });
     }
+function navSpacing(){
+  var navSpace = $('nav').height();
 
+  $('.nav-space').css('height', navSpace + 'px');
+
+  /*var sectionHeight = jQuery('#videos').height();
+
+  $("#videos .right-half").css({"height": sectionHeight+'px', "margin-top": '-'+navSpace+'px'});
+
+  */
+}
 $(document).ready(function() {
   placeImages();
+  navSpacing();
 
   $(window).resize(function() {
     placeImages();
+    navSpacing();
   });
 
   //Cycles between background images
@@ -40,14 +52,7 @@ $(document).ready(function() {
   // run every 7s
   setInterval('cycleImages()', 6000);
 
-  //The orange hovers on nav options
-  /*
-  $('.navlink').click(function(){
-    $(this).addClass('here').delay(2000).queue(function(){
-      $('.navlink').removeClass('here');
-    });
-  });
-  */
+
 
 
   //Smooth scrolling between ""#anchor" links.
@@ -83,7 +88,7 @@ $(document).ready(function() {
   var sp = sm + "%"; //Adds percentage to small one
 
   var divHeight = $('#blog .l-twin').height(),
-      newHeight = divHeight * 1.2;
+      newHeight = divHeight * 1.1;
 
   $('.blog-container').css('height', newHeight +'px');
   //Top Left

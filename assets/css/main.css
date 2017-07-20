@@ -281,12 +281,12 @@ section {
 
 .twin {
   width: 80%;
+  padding: 1em;
   padding-bottom: 2em;
 }
 
 .l-twin {
   float: right;
-  padding-right: 1em;
 }
 
 .r-twin {
@@ -407,6 +407,12 @@ h1, h2, h3, h4, a {
 
 p, button {
   font-family: "Muli", sans-serif;
+}
+
+@media (min-width: 800px) {
+  .hidden-text {
+    font-size: 85%;
+  }
 }
 
 .signature-holder {
@@ -646,13 +652,10 @@ td {
 header {
   margin-top: 40px;
   height: 100vh;
+  display: inline-block;
   overflow: hidden;
 }
 
-/*.title-overlay
-  height: 100%
-  width: 100%
-  z-index: 5 */
 .title-bar {
   position: absolute;
   display: block;
@@ -759,17 +762,19 @@ header {
 }
 
 .vidroll {
-  background-color: pink;
   position: absolute;
+  display: inline-block;
   margin-top: -125vh;
   margin-left: 80px;
-  height: 200vh;
-  width: 30vw;
-  background-size: cover;
+  height: 270vh;
+  width: 10vw;
   background-position-y: -10px;
   background-repeat: repeat-y;
-  box-shadow: 1px 1px 5px #888888;
   z-index: -1;
+}
+
+.vidholder {
+  overflow-y: hidden;
 }
 
 @media (max-width: 767px) {
