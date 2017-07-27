@@ -18,19 +18,23 @@ function placeImages(){
 }
 //Cycling Function found on: http://www.simonbattersby.com/blog/cycling-a-src-with-jquery/
 function cycleImages(){
-      var $active = $('#home .active');
-      var $next = ($('#home .active').next().length > 0) ? $('#home .active').next() : $('#home img:first');
+  var $active = $('#home .active');
+  var $next = ($('#home .active').next().length > 0) ? $('#home .active').next() : $('#home img:first');
 
-      $next.css('z-index', 2);//move the next image up the pile
-	    $active.fadeOut(1400,function(){//fade out the top image
-	       $active.css('z-index', 1).show().removeClass('active');//reset the z-index and unhide the image
-         $next.css('z-index', 3).addClass('active');//make the next image the top one
-      });
-    }
-function navSpacing(){
+  $next.css('z-index', 2);//move the next image up the pile
+  $active.fadeOut(1400,function(){//fade out the top image
+     $active.css('z-index', 1).show().removeClass('active');//reset the z-index and unhide the image
+     $next.css('z-index', 3).addClass('active');//make the next image the top one
+  });
+}
+function spacing(){
   var navSpace = $('nav').height();
 
   $('.nav-space').css('height', navSpace + 'px');
+
+  var homeSpace = $('#home img').height();
+
+  $('#home').css('height', homeSpace + 'px');
 
   /*var sectionHeight = jQuery('#videos').height();
 
@@ -40,11 +44,11 @@ function navSpacing(){
 }
 $(document).ready(function() {
   placeImages();
-  navSpacing();
+  spacing();
 
   $(window).resize(function() {
     placeImages();
-    navSpacing();
+    spacing();
   });
 
   //Cycles between background images

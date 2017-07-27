@@ -239,12 +239,9 @@ section {
   min-height: 50vh;
 }
 
-.trans-img {
-  height: 75vh;
+.trans-img img {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-size: cover;
-  background-position: center;
+  margin-bottom: -20px;
 }
 
 .nav-space {
@@ -675,50 +672,8 @@ td {
   padding: 5px 20px;
 }
 
-header {
-  margin-top: 40px;
-  height: 100vh;
+header#home {
   display: inline-block;
-  overflow: hidden;
-}
-
-.title-bar {
-  position: absolute;
-  display: block;
-  width: 100%;
-  bottom: 10vh;
-  left: 4vw;
-}
-
-.title-holder {
-  padding: 15px;
-  display: inline-block;
-  background-color: rgba(0, 0, 0, 0.5);
-  text-align: center;
-  box-shadow: inset 0px 0px 0px 1px #eee;
-}
-
-.title-holder h1, .title-holder h2 {
-  color: #fcfaf1;
-}
-
-.title-holder h1 {
-  font-size: 30px;
-  letter-spacing: .45em;
-  padding-left: .45em;
-  margin-top: 5px;
-}
-
-.title-holder h2 {
-  font-size: 18px;
-  letter-spacing: .15em;
-}
-
-.bounce-arrow {
-  display: none;
-}
-
-#home {
   padding: 0;
   margin: 0;
   width: 100%;
@@ -744,46 +699,10 @@ header {
   z-index: 3;
 }
 
-@media (max-width: 500px) {
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* For iPad portrait layouts only */
   #home img {
-    width: 100%;
-    min-height: auto;
-  }
-  .title-bar {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    left: 0;
-    top: 10vh;
-    bottom: 10vh;
-  }
-  .title-bar .title-holder {
-    height: 65vh;
-    padding-top: 10%;
-  }
-  .title-bar .title-holder h2 {
-    position: relative;
-  }
-  .arrow-container {
-    position: absolute;
-    width: 100%;
-    height: 50px;
-    top: 60vh;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-  }
-  .bounce-arrow {
-    display: block;
-    margin: 0 auto;
-    cursor: pointer;
-  }
-}
-
-@media (max-width: 375px) {
-  .title-holder h2 {
-    font-size: 16px;
+    left: -50vw;
   }
 }
 
