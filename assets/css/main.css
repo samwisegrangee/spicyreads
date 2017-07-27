@@ -674,6 +674,7 @@ td {
 
 header#home {
   display: inline-block;
+  overflow: hidden;
   padding: 0;
   margin: 0;
   width: 100%;
