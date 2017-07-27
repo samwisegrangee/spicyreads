@@ -1,10 +1,10 @@
 .vidroll
   position: absolute
   display: inline-block
-  margin-top: -125vh
+  margin-top: -111vh
   margin-left: 80px
   height: 270vh
-  width: 10vw
+  width: 20vw
   //background-size: cover
   background-position-y: -10px
   background-repeat: repeat-y
@@ -13,9 +13,11 @@
 .vidholder
   overflow-y: hidden
 
-@media (max-width: 767px)
+@media (max-width: 768px)
   .vidroll
     right: 0
+    margin-top: -150vh
+    width: 30%
 
   #videos .l-twin
     margin: 0 auto !important
@@ -25,3 +27,7 @@
   #videos .left-half
       display: block
       width: 100%
+      
+@media (max-width: 425px)
+  .vidroll
+    width: 50%

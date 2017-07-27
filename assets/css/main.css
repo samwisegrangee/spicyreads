@@ -416,12 +416,23 @@ p, button {
 }
 
 .signature-holder {
+  box-sizing: border-box;
   position: absolute;
   right: 0;
   width: 100%;
   padding: 20px;
   color: #fcfaf1;
   text-align: right;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.signature-holder:hover {
+  opacity: 1;
+}
+
+.signature-holder br {
+  display: none;
 }
 
 .signature-holder a {
@@ -432,6 +443,15 @@ p, button {
 
 .signature-holder a:hover {
   color: #ba0d04;
+}
+
+@media (max-width: 550px) {
+  .signature-holder {
+    text-align: center;
+  }
+  .signature-holder br {
+    display: block;
+  }
 }
 
 nav {
@@ -621,6 +641,12 @@ nav ul li a:hover {
   background-color: #79b89f;
 }
 
+@media (max-width: 768px) {
+  .blog-container {
+    height: 375px !important;
+  }
+}
+
 table {
   width: 100%;
 }
@@ -764,10 +790,10 @@ header {
 .vidroll {
   position: absolute;
   display: inline-block;
-  margin-top: -125vh;
+  margin-top: -111vh;
   margin-left: 80px;
   height: 270vh;
-  width: 10vw;
+  width: 20vw;
   background-position-y: -10px;
   background-repeat: repeat-y;
   z-index: -1;
@@ -777,9 +803,11 @@ header {
   overflow-y: hidden;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .vidroll {
     right: 0;
+    margin-top: -150vh;
+    width: 30%;
   }
   #videos .l-twin {
     margin: 0 auto !important;
@@ -790,5 +818,11 @@ header {
   #videos .left-half {
     display: block;
     width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .vidroll {
+    width: 50%;
   }
 }
