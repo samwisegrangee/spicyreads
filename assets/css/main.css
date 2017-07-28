@@ -738,7 +738,7 @@ header#home {
   #videos .l-twin {
     margin: 0 auto !important;
     float: none !important;
-    background-color: rgba(252, 250, 241, 0.8);
+    background-color: rgba(252, 250, 241, 0.95);
     box-shadow: 1px 1px 5px #888888;
   }
   #videos .left-half {
