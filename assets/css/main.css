@@ -551,6 +551,15 @@ nav ul li a:hover {
   transition: height 1s ease-in;
 }
 
+.q-box a {
+  color: #ba0d04;
+  cursor: pointer;
+}
+
+.q-box a:hover {
+  color: #d93b20;
+}
+
 @media (max-width: 767px) {
   .l-twin .q-box {
     height: 0 !important;
